@@ -9,7 +9,7 @@ import TopBar from "./Components/TopBar";
 // View
 import LandingPage from "./Views/LandingPage";
 // Style in SASS
-import './App.scss';
+import './assets/css/App.scss';
 
 function App() {
   return (

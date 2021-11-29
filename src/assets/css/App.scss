@@ -1,0 +1,82 @@
+
+@import "~bootstrap/scss/bootstrap";
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  background:#202121;
+}
+
+// LandingPage
+#LandingSection {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  background-image: url('../image/bg.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.banner-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.025em;
+}
+
+.banner-subtitle {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+  margin-bottom: .5rem;
+}
+
+.banner-text {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: -.01em;
+}
+
+#AboutSection {
+  min-height: 80vh;
+  color: white;
+  display:flex;
+  align-items: center;
+  background-image: url('../image/bg2.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.preview-image {
+  width: 100%;
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: #777;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: -.01em;
+}
+
+
+
+
+
+
+
+
+
