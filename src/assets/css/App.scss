@@ -5,7 +5,9 @@
 html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: scroll;
+  width:100vw;
 }
 
 .App {
@@ -28,7 +30,6 @@ html, body {
   font-size: 4rem;
   font-weight: 700;
   line-height: 1;
-  letter-spacing: -.025em;
 }
 
 .banner-subtitle {
@@ -63,6 +64,7 @@ html, body {
 .icon-box {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   padding-top: 2rem;
   padding-bottom: 2rem;
   color: #777;
@@ -70,6 +72,24 @@ html, body {
   font-size: 1.6rem;
   line-height: 1.5;
   letter-spacing: -.01em;
+}
+
+#FormSection {
+  min-height:80vh;
+  align-items: center;
+}
+
+
+#FormSection .col .container {
+  display: flex;
+  justify-content:center;
+
+}
+
+.purchase-form {
+  background-color: #fff;
+  max-width: 24rem; 
+  padding: 1rem;
 }
 
 

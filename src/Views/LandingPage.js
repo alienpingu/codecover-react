@@ -7,6 +7,14 @@ import {
 
 import phoneSrc from '../assets/image/phone.png'
 
+import { Icon } from '@iconify/react';
+import securityIcon from '@iconify/icons-mdi/security';
+import clockFast from '@iconify/icons-mdi/clock-fast';
+import rocketLaunch from '@iconify/icons-mdi/rocket-launch';
+import qrcodeScan from '@iconify/icons-mdi/qrcode-scan';
+
+import PurchaseForm from '../Components/PurchaseForm';
+
 function LandingPage() {
 
 	return(<>
@@ -34,21 +42,23 @@ function LandingPage() {
 									<p className="banner-text m-0">Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Ullam delectus eos, aliquam in.</p>
 									<p className="banner-text">Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Ullam delectus eos, aliquam in.</p>
 									<Row>
-										<Col className="icon-box" lg={6}>Details product</Col>
-										<Col className="icon-box" lg={6}>Details product</Col>
-										<Col className="icon-box" lg={6}>Details product</Col>
-										<Col className="icon-box" lg={6}>Details product</Col>
+										<Col className="icon-box" lg={6}><Icon icon={securityIcon} /> <span>Details product</span></Col>
+										<Col className="icon-box" lg={6}><Icon icon={clockFast} /> <span>Details product</span></Col>
+										<Col className="icon-box" lg={6}><Icon icon={rocketLaunch} /> <span>Details product</span></Col>
+										<Col className="icon-box" lg={6}><Icon icon={qrcodeScan} /> <span>Details product</span></Col>
 									</Row>
 								</Col>
 							</Row>
 						</Container>
 					</div>
-					<Row id="form">
+					<Row id="FormSection">
 						<Col lg={6}>
 							{"akjsd"}
 						</Col>
 						<Col lg={6}>
-							{"akjsd"}
+							<Container>
+								<PurchaseForm />
+							</Container>
 						</Col>
 					</Row>
 				</>)
