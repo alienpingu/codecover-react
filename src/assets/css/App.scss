@@ -11,7 +11,7 @@ html, body {
 }
 
 .App {
-  background:#202121;
+  background:#fff;
 }
 
 // LandingPage
@@ -33,7 +33,7 @@ html, body {
 }
 
 .banner-subtitle {
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -.025em;
@@ -55,6 +55,7 @@ html, body {
   background-image: url('../image/bg2.png');
   background-position: center;
   background-size: cover;
+  padding-top: 4rem;
 }
 
 .preview-image {
@@ -64,12 +65,12 @@ html, body {
 .icon-box {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: 2rem;
   padding-bottom: 2rem;
   color: #777;
   font-weight: 300;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.5;
   letter-spacing: -.01em;
 }
@@ -95,8 +96,8 @@ html, body {
 
 
 
-
-
-
-
-
+@media (min-width: 480px) {
+  #AboutSection {
+    padding-top: 0;
+  }
+}

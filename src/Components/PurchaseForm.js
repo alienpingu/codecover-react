@@ -6,14 +6,12 @@ import {
         Form,
         Row,
         Col,
-        InputGroup,
         Button,
       } from 'react-bootstrap';
 
 const schema = yup.object().shape({
   firstName: yup.string().required(),
   lastName: yup.string().required(),
-  modello: yup.mixed().required(),
   file: yup.mixed().required(),
   terms: yup.bool().required().oneOf([true], 'terms must be accepted'),
 });
@@ -26,7 +24,6 @@ export default function PurchaseForm() {
       initialValues={{
         firstName: '',
         lastName: '',
-        modello: '',
         file: null,
         terms: false,
       }}
@@ -56,7 +53,7 @@ export default function PurchaseForm() {
                 onChange={handleChange}
                 isValid={touched.firstName && !errors.firstName}
               />
-              <Form.Control.Feedback tooltip>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback feedbackType="invalid">Inserisci qualcosa!</Form.Control.Feedback>
             </Form.Group>
             <Form.Group
               as={Col}
@@ -73,24 +70,9 @@ export default function PurchaseForm() {
                 isValid={touched.lastName && !errors.lastName}
               />
 
-              <Form.Control.Feedback tooltip>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback feedbackType="invalid">Inserisci qualcosa!</Form.Control.Feedback>
             </Form.Group>
           </Row>
-          <Form.Group
-              as={Col}
-              md="6"
-              controlId="validationFormik103"
-              className="position-relative"
-            >
-            <Form.Select 
-              aria-label="Default select example">
-
-              <option>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </Form.Select>
-          </Form.Group>
           <Form.Group className="position-relative mb-3">
             <Form.Label>File</Form.Label>
             <Form.Control
@@ -100,7 +82,7 @@ export default function PurchaseForm() {
               onChange={handleChange}
               isInvalid={!!errors.file}
             />
-            <Form.Control.Feedback type="invalid" tooltip>
+            <Form.Control.Feedback feedbackType="invalid" tooltip>
               {errors.file}
             </Form.Control.Feedback>
           </Form.Group>

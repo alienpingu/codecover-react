@@ -9,7 +9,7 @@ import {
 
 function TopBar() {
 
-	return(<Navbar bg="none" variant="dark">
+	return(<Navbar bg="none" variant="dark" className="fixed-top">
 		    <Container>
 		    <Link to="/" className="nav-brand">Logo</Link>
 		    <Nav className="me-right">
