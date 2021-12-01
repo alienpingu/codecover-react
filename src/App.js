@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 // Virtual Router 
 import {
   HashRouter as Router,
@@ -12,13 +12,21 @@ import LandingPage from "./Views/LandingPage";
 import './assets/css/App.scss';
 
 function App() {
+  const [checkout, setCheckout] = useState({
+    email: String,
+    img: null,
+    tos: false,
+    cart: Array
+  });
+
+
   return (
     <div className="App">
       <Router>
       <TopBar/>
       <div>
           <Route exact path="/">
-            <LandingPage />
+            <LandingPage setCheckout={setCheckout}/>
           </Route>
           <Route path="/about">
             {'about'}

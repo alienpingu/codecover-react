@@ -15,6 +15,7 @@ const schema = yup.object().shape({
   firstName: yup.string().required(),
   lastName: yup.string().required(),
   username: yup.string().required(),
+  address: yup.string().required(),
   city: yup.string().required(),
   state: yup.string().required(),
   zip: yup.string().required(),
@@ -30,6 +31,7 @@ export default function PurchaseForm() {
         firstName: '',
         lastName: '',
         username: '',
+        address: '',
         city: '',
         state: '',
         zip: '',
@@ -47,8 +49,8 @@ export default function PurchaseForm() {
       }) => (
         <Form noValidate onSubmit={handleSubmit}>
           <Row className="mb-3">
-            <Form.Group as={Col} md="4" controlId="validationFormik01">
-              <Form.Label>First name</Form.Label>
+            <Form.Group as={Col} md="6" controlId="validationFormik01">
+              <Form.Label>Nome</Form.Label>
               <Form.Control
                 type="text"
                 name="firstName"
@@ -58,13 +60,13 @@ export default function PurchaseForm() {
                 isInvalid={!!errors.firstName}
 
               />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback></Form.Control.Feedback>
               <Form.Control.Feedback type="invalid">
                   Inserire nome
                 </Form.Control.Feedback>
             </Form.Group>
-            <Form.Group as={Col} md="4" controlId="validationFormik02">
-              <Form.Label>Last name</Form.Label>
+            <Form.Group as={Col} md="6" controlId="validationFormik02">
+              <Form.Label>Cognome</Form.Label>
               <Form.Control
                 type="text"
                 name="lastName"
@@ -75,28 +77,28 @@ export default function PurchaseForm() {
 
               />
 
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback></Form.Control.Feedback>
               <Form.Control.Feedback type="invalid">
                   Inserire cognome
                 </Form.Control.Feedback>
             </Form.Group>
-            <Form.Group as={Col} md="4" controlId="validationFormikUsername">
-              <Form.Label>Username</Form.Label>
-              <InputGroup hasValidation>
-                <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
-                <Form.Control
-                  type="text"
-                  placeholder="Username"
-                  aria-describedby="inputGroupPrepend"
-                  name="username"
-                  value={values.username}
-                  onChange={handleChange}
-                  isInvalid={!!errors.username}
-                />
-                <Form.Control.Feedback type="invalid">
-                  {errors.username}
+          </Row>
+          <Row className="mb-3">
+            <Form.Group as={Col} md="12" controlId="validationFormik01">
+              <Form.Label>Via</Form.Label>
+              <Form.Control
+                type="text"
+                name="address"
+                value={values.address}
+                onChange={handleChange}
+                isValid={touched.address && !errors.address}
+                isInvalid={!!errors.address}
+
+              />
+              <Form.Control.Feedback></Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">
+                  Inserire via per spedizione
                 </Form.Control.Feedback>
-              </InputGroup>
             </Form.Group>
           </Row>
           <Row className="mb-3">

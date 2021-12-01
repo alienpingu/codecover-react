@@ -17,6 +17,7 @@ import rocketLaunch from '@iconify/icons-mdi/rocket-launch';
 import qrcodeScan from '@iconify/icons-mdi/qrcode-scan';
 
 import PurchaseForm from '../Components/PurchaseForm';
+import NewsLetterForm from '../Components/NewsLetterForm';
 
 function LandingPage() {
 
@@ -39,19 +40,19 @@ function LandingPage() {
 					<div id="AboutSection">
 						<Container>
 							<Row>
-								<Col lg={6}>
+								<Col md={6}>
 									<img className="preview-image" src={phoneSrc} alt="preview-cover" />
 								</Col>
-								<Col lg={6}>
+								<Col md={6}>
 									<h2 className="banner-subtitle">Comodo, Semplice, Veloce!</h2>
 									<h1 className="banner-title">Codecover Green Pass</h1>
 									<p className="banner-text m-0">Il tuo GreenPass inciso sulla cover del tuo smartphone in modo indelebile ed indeformabile.</p>
 									<p className="banner-text">Sempre leggibile, Sempre funzionante.</p>
 									<Row>
-										<Col className="icon-box" lg={6}><Icon icon={securityIcon} /> <span>Brevettato</span></Col>
-										<Col className="icon-box" lg={6}><Icon icon={clockFast} /> <span>Sempre Attivo</span></Col>
-										<Col className="icon-box" lg={6}><Icon icon={rocketLaunch} /> <span>Incisione Laser</span></Col>
-										<Col className="icon-box" lg={6}><Icon icon={qrcodeScan} /> <span>Materiale inalterabile</span></Col>
+										<Col className="icon-box" xs={6}><Icon icon={securityIcon} /> <span>Brevettato</span></Col>
+										<Col className="icon-box" xs={6}><Icon icon={clockFast} /> <span>Sempre Attivo</span></Col>
+										<Col className="icon-box" xs={6}><Icon icon={rocketLaunch} /> <span>Incisione Laser</span></Col>
+										<Col className="icon-box" xs={6}><Icon icon={qrcodeScan} /> <span>Materiale inalterabile</span></Col>
 									</Row>
 								</Col>
 							</Row>
@@ -104,6 +105,10 @@ function LandingPage() {
 					<div id="ContactSection" className="py-4">
 						<Container>
 							<Row>
+								<Col xs="12" className="text-center mb-4">
+									<h2 className="display-4">Contatti</h2>
+									<p className="h6text-gray">Che tu sia un privato o una azienda potete contattarci attraverso il form sottostante, vi risponderemo nel più breve tempo possibile</p>
+								</Col>
 								<Col lg="6">
 									<h2>CodeCover</h2>
 									<p>Contattaci per avere ulteriori informazioni</p>
@@ -140,6 +145,13 @@ function LandingPage() {
 									</Form>
 								</Col>
 							</Row>
+						</Container>
+					</div>
+					<div id="newsletterSection" className="text-center text-light bg-dark py-4 ">
+						<Container>
+							<h2>Lasciami una email</h2>
+							<p>per esser informato su tutte le nostre novità ed offerte</p>
+							<NewsLetterForm />	
 						</Container>
 					</div>
 				</>)
